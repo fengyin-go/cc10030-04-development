@@ -1,6 +1,8 @@
-"""业务路由汇总：所有模块共用一套资源路由，由领域服务完成分派。"""
+"""业务路由汇总：固定阶段路由先注册，通用模块资源路由兜底。"""
 from __future__ import annotations
 
-from app.routers import resource
+from app.routers import partition_merge, resource
 
-ROUTERS = [resource]
+# partition_merge 含 /api/partition-merge/* 固定路径，必须排在
+# /api/{module} 动态资源路由之前，避免被通配模块名抢先匹配。
+ROUTERS = [partition_merge, resource]

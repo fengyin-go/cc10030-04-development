@@ -6,6 +6,7 @@ from app.services.lake_zone import LakeZoneService
 from app.services.ingest_pipeline import IngestPipelineService
 from app.services.schema_registry import SchemaRegistryService
 from app.services.partition_policy import PartitionPolicyService
+from app.services.partition_merge_plan import PartitionMergePlanService
 from app.services.file_format import FileFormatService
 from app.services.data_retention import DataRetentionService
 from app.services.metadata_catalog import MetadataCatalogService
@@ -28,6 +29,7 @@ SERVICES: dict[str, BaseModuleService] = {
     "ingest_pipeline": IngestPipelineService(),
     "schema_registry": SchemaRegistryService(),
     "partition_policy": PartitionPolicyService(),
+    "partition_merge_plan": PartitionMergePlanService(),
     "file_format": FileFormatService(),
     "data_retention": DataRetentionService(),
     "metadata_catalog": MetadataCatalogService(),

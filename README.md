@@ -54,6 +54,7 @@ npm run dev
 | 入湖管道 | `ingest_pipeline` | 管道配置 | 管道名称、源端类型、目标湖区 |
 | Schema注册 | `schema_registry` | Schema版本 | 主题名称、Schema定义、版本号 |
 | 分区策略 | `partition_policy` | 分区规则 | 规则名称、目标数据集、分区键 |
+| 分区合并计划 | `partition_merge_plan` | 分区合并计划 | 计划编号、快照版本、合并分组数、计划版本 |
 | 存储格式 | `file_format` | 格式模板 | 模板名称、文件格式、压缩算法 |
 | 留存策略 | `data_retention` | 留存规则 | 规则名称、目标湖区、保留天数 |
 | 元数据目录 | `metadata_catalog` | 元数据条目 | 条目ID、数据集名称、所属湖区 |
